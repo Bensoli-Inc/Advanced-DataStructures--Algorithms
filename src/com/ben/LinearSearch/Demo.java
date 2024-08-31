@@ -1,4 +1,4 @@
-//I'm having a list of elements and I want to search an element out of it.
+package com.ben.LinearSearch;//I'm having a list of elements and I want to search an element out of it.
 
 public class Demo {
     public static void main (String[] args)
