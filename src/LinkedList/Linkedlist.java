@@ -34,6 +34,26 @@ public class Linkedlist
         head =node;
     }
 
+    public void insertAt(int index, int data)
+    {
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        if(index==0)
+        {
+            insertAtStart(data);
+        }
+        else {
+            Node n = head;
+            for (int i = 0; i <= index - 1; i++) {
+                n = n.next;
+            }
+            node.next = n.next;
+            n.next = node;
+        }
+    }
+
     public void show()
     {
         Node node = head;
