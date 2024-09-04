@@ -6,6 +6,10 @@ public class Main
     {
         Linkedlist list = new Linkedlist();
         list.insert(5);
+        list.insert(45);
+        list.insert(12);
+
+        list.show();
     }
 }
 
