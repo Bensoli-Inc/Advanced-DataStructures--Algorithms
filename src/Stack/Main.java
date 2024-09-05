@@ -8,6 +8,9 @@ public class Main
         nums.push(15);
         nums.push(8);
         nums.push(22);
+        nums.push(44);
+        nums.push(54);
+        nums.push(2);
 
         System.out.println("finding element " + nums.peek());
         nums.push(10);

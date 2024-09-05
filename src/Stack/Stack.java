@@ -7,16 +7,27 @@ public class Stack
 
     public void push(int data)
     {
-        stack[top] = data;
-        top++;
+        if(top>=5) //handling outOfBound exceptions
+        {
+            System.out.println("stack is full");
+        }
+        else {
+            stack[top] = data;
+            top++;
+        }
     }
 
     public int pop()
     {
-        int data;
-        top--;
-        data = stack[top];
-        stack[top] = 0;
+        int data = 0;
+        if(isEmpty())
+        {
+            System.out.println("stack is empty");
+        } else {
+            top--;
+            data = stack[top];
+            stack[top] = 0;
+        }
         return data;
     }
 
