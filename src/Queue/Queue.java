@@ -9,16 +9,27 @@ public class Queue
 
     public void enQueue(int data)
     {
-        queue[rear] = data;
-        rear = (rear + 1)%5;
-        size++;
+        if(!isFull()) {
+            queue[rear] = data;
+            rear = (rear + 1) % 5;
+            size++;
+        }
+        else{
+            System.out.println("Que is full");
+        }
     }
 
     public int deQueue()
     {
         int data = queue[front];
-        front = (front + 1)%5;
-        size--;
+
+        if(!isEmpty()) {
+            front = (front + 1) % 5;
+            size--;
+        }
+        else{
+            System.out.println("Que is Empty");
+        }
         return  data;
     }
 
@@ -43,11 +54,11 @@ public class Queue
 
     public boolean isEmpty()
     {
-        return size==0;
+        return getSize()==0;
     }
 
     public boolean isFull()
     {
-        return size == 5;
+        return getSize() == 5;
     }
 }
