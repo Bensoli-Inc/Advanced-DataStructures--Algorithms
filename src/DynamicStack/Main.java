@@ -16,6 +16,15 @@ public class Main
         nums.push(30);
         nums.show();
         nums.push(55);
+        nums.show();
+
+        nums.pop();
+        nums.show();
+        nums.pop();
+        nums.show();
+        nums.pop();
+        nums.show();
+
 
     }
 }
