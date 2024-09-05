@@ -6,10 +6,13 @@ public class Main
     {
         Stack nums = new Stack();
         nums.push(15);
-        nums.push(20);
+        nums.push(8);
+        nums.push(22);
 
-        nums.pop();
-        nums.peek();
+        System.out.println(nums.peek());
+        nums.push(10);
+        System.out.println(nums.pop());
+        nums.show();
     }
 }
 
