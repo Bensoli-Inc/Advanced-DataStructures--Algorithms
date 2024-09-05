@@ -27,6 +27,15 @@ public class Stack
         return data;
     }
 
+    public int size()
+    {
+        return top;
+    }
+    public boolean isEmpty()
+    {
+        return top<=0;
+    }
+
     public void show()
     {
         for(int n : stack)
