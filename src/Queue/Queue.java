@@ -10,14 +10,14 @@ public class Queue
     public void enQueue(int data)
     {
         queue[rear] = data;
-        rear++;
+        rear = (rear + 1)%5;
         size++;
     }
 
     public int deQueue()
     {
         int data = queue[front];
-        front++;
+        front = (front + 1)%5;
         size--;
         return  data;
     }
@@ -27,7 +27,27 @@ public class Queue
         System.out.print("Elements : ");
         for(int i=0;i<size;i++)
         {
-            System.out.print(queue[front+i] + " ");
+            System.out.print(queue[(front+i)%5] + " ");
         }
+        System.out.println();
+        for(int n : queue)
+        {
+            System.out.print(n + " ");
+        }
+    }
+
+    public int getSize()
+    {
+        return  size;
+    }
+
+    public boolean isEmpty()
+    {
+        return size==0;
+    }
+
+    public boolean isFull()
+    {
+        return size == 5;
     }
 }
