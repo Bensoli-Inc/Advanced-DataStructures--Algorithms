@@ -47,4 +47,19 @@ public class BinaryTree
             inOrderRec(root.right);
         }
     }
+
+    public void preOrder()
+    {
+        preOrderRec(root);
+    }
+
+    public void preOrderRec(Node root)
+    {
+        if(root != null)
+        {
+            System.out.print(root.data + " ");
+            preOrderRec(root.left);
+            preOrderRec(root.right);
+        }
+    }
 }

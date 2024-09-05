@@ -13,5 +13,7 @@ public class Main
         tree.insert(6);
 
         tree.inOrder();
+        System.out.println();
+        tree.preOrder();
     }
 }
